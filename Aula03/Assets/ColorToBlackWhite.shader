@@ -30,7 +30,7 @@ Shader "Custom/ColorToBlackWhite"
                 {
                     float r = input[0];
                     float g = (input[0] + input[1] + input[2]) / 3;
-                    float b = (0.3 * r) + (0.59 * b) + (0.11 * input[2]);
+                    float b = (0.3 * input[0]) + (0.59 * input[1]) + (0.11 * input[2]);
 
                     return float4(r, g, b, input[3]);
                 }
