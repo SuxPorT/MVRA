@@ -37,7 +37,8 @@ Shader "Custom/WhiteThreshold"
                     if (r >= _Threshold || g >= _Threshold || b >= _Threshold)
                     {
                         return float4(1, 1, 1, input[3]);
-                    } else
+                    }
+                    else
                     {
                         return float4(0, 0, 0, input[3]);
                     }
@@ -51,14 +52,14 @@ Shader "Custom/WhiteThreshold"
                     output.texCoord = input.texCoord;
 
                     return output;
-                };
+                }
 
                 float4 frag(VertexOutput input) : COLOR
                 {
                     float4 color = tex2D(_Texture, input.texCoord.xy);
                     
                     return threshold(color);
-                };
+                }
             ENDCG
         }
     }

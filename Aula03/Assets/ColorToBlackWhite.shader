@@ -43,14 +43,14 @@ Shader "Custom/ColorToBlackWhite"
                     output.texCoord = input.texCoord;
 
                     return output;
-                };
+                }
 
                 float4 frag(VertexOutput input) : COLOR
                 {
                     float4 color = tex2D(_Texture, input.texCoord.xy);
                     
                     return greyscale(color);
-                };
+                }
             ENDCG
         }
     }
