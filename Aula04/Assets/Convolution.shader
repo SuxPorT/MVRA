@@ -1,4 +1,4 @@
-Shader "Custom/Covolution"
+Shader "Custom/Convolution"
 {
     Properties
     {
